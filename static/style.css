@@ -51,6 +51,8 @@ header {
 /* комбинированный селектор для элементов-потомков */
 .nav a {
     text-decoration: none;
+    text-transform: uppercase;
+    font-size: large;
 }
 main {
     grid-area: m;

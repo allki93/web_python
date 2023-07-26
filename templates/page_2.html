@@ -2,10 +2,31 @@
 
 {% block main%}
 <div>
-    <h1>Page 2</h1>
+    <h1>Генератор пароля</h1>
+    <form method="post">
+        <!-- поля ввода данных -->
+        <div class="field">
+            <label for="p">Пароль:</label>
+            <input type="password" id="p" name="pwd">
+        </div>
+        <div class="field">
+            <label for="s">Соль:</label>
+            <input type="text" id="s" name="salt">
+        </div>
+        <div class="field">
+            <label for="n">Кол-во символов:</label>
+            <input type="text" id="n" name="num_char">
+        </div>
 
-    <p>
+        <!-- кнопка -->
+        <button type="submit">Отправить</button>
+    </form>
+
+    <div class="result">
+        Результат:{{ data }}
+    </div>
+    <!-- <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-    </p>
+    </p> -->
 </div>
 {% endblock %}
