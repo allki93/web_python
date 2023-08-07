@@ -1,10 +1,29 @@
 {% extends "base.html" %}
 
 {% block main%}
-<div>
-    <h1>Page 3</h1>
+<div class="content">
+    <h1>Данные из базы данных</h1>
 
-    <img src="../examples/1.svg" alt="logo">
+    <!-- таблица-->
+    <table>
+        <!-- Строка заголовков столбцов -->
+        <tr>
+            <th>№</th>
+            <th>Пароль-сырец</th>
+            <th>Соль</th>
+            <th>Кол-во символов</th>
+            <th>Результат</th>
+        </tr>
+        {% for row in data %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
 
 </div>
 {% endblock %}

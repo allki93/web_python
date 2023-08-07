@@ -82,6 +82,19 @@ main {
     grid-row: 3/4;
 }
 
+.content table {
+    border: 1px solid green;
+}
+.content td {
+    border: 1px solid greenyellow;
+    padding: 5px;
+}
+.content th {
+    /* border: 1px solid rgb(167, 139, 14); */
+    background-color: rgb(155, 100, 17);
+    padding: 5px;
+    color: azure;
+}  
 footer {
     grid-area: f;
 }
